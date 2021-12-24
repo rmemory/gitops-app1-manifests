@@ -2,9 +2,9 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: myapp-argo-application
-  namespace: app1-ns
+  namespace: argocd
 spec:
-  project: app1
+  project: default
 
   source:
     repoURL: https://github.com/rmemory/gitops-app1-manifests.git
@@ -12,7 +12,7 @@ spec:
     path: dev
   destination: 
     server: https://kubernetes.default.svc
-    namespace: app1
+    namespace: app1-ns
 
   syncPolicy:
     syncOptions:
