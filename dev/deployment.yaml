@@ -16,4 +16,4 @@ spec:
       - name: app1
         image: richardmemory/nodeapihello:1.0
         ports:
-        - containerPort: 8080
+        - containerPort: 3000
